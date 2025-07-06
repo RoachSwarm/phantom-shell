@@ -1,0 +1,10 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+echo "[+] Mirror Core: Checking for updates..."
+cd ~/phantom-shell
+
+if git pull origin main | grep -q 'Already up to date'; then
+    echo "[✓] No updates. Mirror Shell is current."
+else
+    echo "[!] Update pulled. Run install.sh if needed."
+fi
